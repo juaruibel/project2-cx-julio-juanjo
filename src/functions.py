@@ -34,3 +34,12 @@ def save_data_clean(df, nombre):
     df.to_csv(out_path, index=False)
     print(f"Guardado: {out_path}")
     return "ok"
+
+def load_data_merge(file_merge):
+    """
+    Carga el .csv limpio del merge para analizar pero manteniendo el tipo:
+    c.p como string dado que pandas lo convierte automáticamente a int
+    :param file_merge: nombre del archivo para cargar
+    """
+    path = DATA_CLEAN_DIR / file_merge
+    return pd.read_csv(path)
