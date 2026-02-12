@@ -58,6 +58,20 @@ def tasa_finalizacion(df):
     output = round((num_usuarios_confirm/num_client_id_unique)*100, 2)
     return output
 
+def num_usuarios_total_y_confirm(df):
+    """
+    Toma un dataframe y devuelve tasa de finalización.
+    """
+    # Usuarios únicos que llegan a confirm 
+    usuarios_confirm = df[df["process_step"] == "confirm"]
+    usuarios_confirm = (df[df["process_step"] == "confirm"][["client_id"]].drop_duplicates())
+    num_usuarios_confirm = usuarios_confirm.shape[0]
+    # Client id únicos
+    num_client_id_unique = df["client_id"].nunique()
+    print(f"Número de usuarios: {num_client_id_unique}")
+    print(f"Número de usuarios que finalizan: {num_usuarios_confirm}")
+    return num_client_id_unique, num_usuarios_confirm
+
 def tiempo_dedicado(df):
     """
     Toma un dataframe y devuelve el tiempo dedicado de los pasos.
@@ -119,3 +133,14 @@ def tasa_error(df):
     total_transiciones = df["next_step"].notna().sum()
     tasa_error = round((error_total / total_transiciones) * 100, 2)
     return tasa_error
+
+def finish(df):
+    """
+    Toma un dataframe y devuelve el dataframe convirtiendo la columna process_step en bool/int.
+    """
+    finish = (
+        df.groupby("client_id")["process_step"]
+        .apply(lambda s: (s == "confirm").any())
+        .astype(int)
+    )
+    return finish
