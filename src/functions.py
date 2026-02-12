@@ -31,6 +31,7 @@ def save_data_clean(df, nombre):
 
     ts = datetime.now().strftime("%Y%m%d_%H%M")
     out_path = out_dir / f"{ts}_{nombre}.csv"
+    df = df.drop_duplicates()
     df.to_csv(out_path, index=False)
     print(f"Guardado: {out_path}")
     return "ok"
@@ -96,7 +97,7 @@ def tasa_error(df):
     sin embargo cabe la posibilidad de considerar como error que next_step sea el mismo paso
     pero sí se contabiliza como transición.
     """
-    
+
     df["date_time"] = pd.to_datetime(df["date_time"])
     df = df.sort_values(["visitor_id", "visit_id", "date_time"])
 
