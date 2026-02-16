@@ -144,3 +144,35 @@ def finish(df):
         .astype(int)
     )
     return finish
+
+def to_datetime(df):
+    """
+    Convierte columna en datetime y lo ordena por client_id,
+    visit_id, date_time.
+    """
+    df["date_time"] = pd.to_datetime(df["date_time"])
+    df = df.sort_values(["client_id", "visit_id", "date_time"])
+    return df
+
+def calcular_tiempo_para_test(df, df2):
+    """
+    Calcula el tiempo hasta confirm. Devuelve df_control y df_test para
+    realizar el test.
+    :param df: dataframe
+    :param df: dataframe2
+    """
+    test = df2[df2["Variation"]=="Test"]
+    control = df2[df2["Variation"]=="Control"]
+    df["t0"] = df.groupby(["client_id","visit_id"])["date_time"].transform("min")
+    df_confirm = df[df["process_step"] == "confirm"]
+    confirm_times = (
+        df_confirm.groupby(["client_id", "visit_id"], as_index=False)["date_time"]
+        .min()
+        .rename(columns={"date_time": "t_confirm"})
+    )
+    df = df.merge(confirm_times, on=["client_id", "visit_id"], how="left")
+    df["time_to_confirm"] = df["t_confirm"] - df["t0"]
+    df = df.groupby("client_id")
+    df_control = df[df["client_id"].isin(control["client_id"])]
+    df_test = df[df["client_id"].isin(test["client_id"])]
+    return df_control, df_test
