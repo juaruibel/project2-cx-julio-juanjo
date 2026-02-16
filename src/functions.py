@@ -217,3 +217,16 @@ def calcular_tiempo_para_test(df, df2):
     ]
 
     return control_times, test_times
+
+def preparar_grupos_experimento(df_exp, df_demo, columna_valor):
+    """
+    Une los datos del experimento y demografía, y separa los valores por grupo.
+    """
+    # 1. Merge de los DataFrames
+    df_merged = pd.merge(df_exp, df_demo, on='client_id', how='inner')
+    
+    # 2. Filtrado por grupos para la columna deseada
+    test_vals = df_merged[df_merged["Variation"] == "Test"][columna_valor]
+    control_vals = df_merged[df_merged["Variation"] == "Control"][columna_valor]
+    
+    return test_vals, control_vals, df_merged
