@@ -156,23 +156,64 @@ def to_datetime(df):
 
 def calcular_tiempo_para_test(df, df2):
     """
-    Calcula el tiempo hasta confirm. Devuelve df_control y df_test para
-    realizar el test.
-    :param df: dataframe
-    :param df: dataframe2
+    Calcula el tiempo hasta `confirm` por usuario (client_id) para poder
+    comparar control vs test.
+
+    Regla usada (A):
+    - Se calcula `time_to_confirm` por sesion (client_id, visit_id).
+    - Si un client_id confirma en varias sesiones, se toma la PRIMERA sesion
+      que confirma (menor `t_confirm`).
+
+    Devuelve dos Series numéricas (segundos) listas para `ttest_ind`.
+
+    :param df: dataframe de eventos (debe incluir client_id, visit_id, process_step, date_time)
+    :param df2: dataframe de asignacion al experimento (debe incluir client_id, Variation)
     """
-    test = df2[df2["Variation"]=="Test"]
-    control = df2[df2["Variation"]=="Control"]
-    df["t0"] = df.groupby(["client_id","visit_id"])["date_time"].transform("min")
-    df_confirm = df[df["process_step"] == "confirm"]
-    confirm_times = (
+    df_events = df.copy()
+    df_events["date_time"] = pd.to_datetime(df_events["date_time"])
+    df_events = df_events.sort_values(["client_id", "visit_id", "date_time"])
+
+    # t0 por sesion
+    t0 = (
+        df_events.groupby(["client_id", "visit_id"], as_index=False)["date_time"]
+        .min()
+        .rename(columns={"date_time": "t0"})
+    )
+
+    # t_confirm por sesion (si no hay confirm, quedara NaT tras el merge)
+    df_confirm = df_events[df_events["process_step"] == "confirm"]
+    t_confirm = (
         df_confirm.groupby(["client_id", "visit_id"], as_index=False)["date_time"]
         .min()
         .rename(columns={"date_time": "t_confirm"})
     )
-    df = df.merge(confirm_times, on=["client_id", "visit_id"], how="left")
-    df["time_to_confirm"] = df["t_confirm"] - df["t0"]
-    df = df.groupby("client_id")
-    df_control = df[df["client_id"].isin(control["client_id"])]
-    df_test = df[df["client_id"].isin(test["client_id"])]
-    return df_control, df_test
+
+    sessions = t0.merge(t_confirm, on=["client_id", "visit_id"], how="left")
+    sessions["time_to_confirm"] = sessions["t_confirm"] - sessions["t0"]
+
+    # Nos quedamos solo con sesiones que confirman
+    sessions_confirm = sessions.dropna(subset=["t_confirm"]).copy()
+
+    # Regla A: primera sesion que confirma por client_id
+    first_confirm = (
+        sessions_confirm.sort_values(["client_id", "t_confirm"])
+        .drop_duplicates(subset=["client_id"], keep="first")
+    )
+
+    # Asignacion a control/test
+    assignment = df2[["client_id", "Variation"]].drop_duplicates()
+    first_confirm = first_confirm.merge(assignment, on="client_id", how="inner")
+
+    # Para t-test: pasar a segundos (float)
+    first_confirm["time_to_confirm_seconds"] = (
+        first_confirm["time_to_confirm"].dt.total_seconds()
+    )
+
+    control_times = first_confirm.loc[
+        first_confirm["Variation"] == "Control", "time_to_confirm_seconds"
+    ]
+    test_times = first_confirm.loc[
+        first_confirm["Variation"] == "Test", "time_to_confirm_seconds"
+    ]
+
+    return control_times, test_times

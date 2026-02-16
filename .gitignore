@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 .venv/
 data/
+calcular_tiempo_para_test.md
