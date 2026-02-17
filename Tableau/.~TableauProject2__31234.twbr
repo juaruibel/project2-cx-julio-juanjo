@@ -1,0 +1,1931 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0109.0333                               -->
+<workbook original-version='18.1' source-build='2025.3.2 (20253.26.0109.0333)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <_.fcp.ObjectModelSharedDimensions.true...ObjectModelSharedDimensions />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1+ (Varias conexiones)' inline='true' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='20260217_1148_high_value_client' name='excel-direct.1lfikcq1pmfzv71294z7s18mvexq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jbp/Desktop/IRONHACK/project2-cx-julio-juanjo/data/cleaned/20260217_1148_high_value_client.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='20260217_1046_df_demo_ab' name='excel-direct.0nkcipf0dc3cxx11m755j0oxxt8r'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jbp/Desktop/IRONHACK/project2-cx-julio-juanjo/data/cleaned/20260217_1046_df_demo_ab.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='20260217_1046_df_events_ab' name='excel-direct.1poaxvw1czkenq160ywl00gbback'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jbp/Desktop/IRONHACK/project2-cx-julio-juanjo/data/cleaned/20260217_1046_df_events_ab.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='20260217_1046_df_times' name='excel-direct.0hs9pg00q7mt9219msayi0grhjhi'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/jbp/Desktop/IRONHACK/project2-cx-julio-juanjo/data/cleaned/20260217_1046_df_times.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='excel-direct.1lfikcq1pmfzv71294z7s18mvexq' name='Sheet1' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:K9169:no:A1:K9169:0' header='yes' outcome='6'>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+              <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+              <column datatype='real' name='clnt_age' ordinal='3' />
+              <column datatype='string' name='gendr' ordinal='4' />
+              <column datatype='integer' name='num_accts' ordinal='5' />
+              <column datatype='real' name='bal' ordinal='6' />
+              <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+              <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+              <column datatype='string' name='Age_category' ordinal='9' />
+              <column datatype='string' name='Years_category' ordinal='10' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='excel-direct.1poaxvw1czkenq160ywl00gbback' name='Sheet11' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:F10001:no:A1:F10001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='string' name='visitor_id' ordinal='1' />
+              <column datatype='string' name='visit_id' ordinal='2' />
+              <column datatype='string' name='process_step' ordinal='3' />
+              <column datatype='datetime' name='date_time' ordinal='4' />
+              <column datatype='string' name='Variation' ordinal='5' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='excel-direct.0nkcipf0dc3cxx11m755j0oxxt8r' name='Sheet12' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:J10001:no:A1:J10001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+              <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+              <column datatype='real' name='clnt_age' ordinal='3' />
+              <column datatype='string' name='gendr' ordinal='4' />
+              <column datatype='integer' name='num_accts' ordinal='5' />
+              <column datatype='real' name='bal' ordinal='6' />
+              <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+              <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+              <column datatype='string' name='Variation' ordinal='9' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+          <_.fcp.ObjectModelSharedDimensions.true...relation connection='excel-direct.1lfikcq1pmfzv71294z7s18mvexq' name='Sheet13' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:K9169:no:A1:K9169:0' header='yes' outcome='6'>
+              <column datatype='integer' name='client_id' ordinal='0' />
+              <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+              <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+              <column datatype='real' name='clnt_age' ordinal='3' />
+              <column datatype='string' name='gendr' ordinal='4' />
+              <column datatype='integer' name='num_accts' ordinal='5' />
+              <column datatype='real' name='bal' ordinal='6' />
+              <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+              <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+              <column datatype='string' name='Age_category' ordinal='9' />
+              <column datatype='string' name='Years_category' ordinal='10' />
+            </columns>
+          </_.fcp.ObjectModelSharedDimensions.true...relation>
+        </relation>
+        <cols>
+          <map key='[Age_category (Sheet13)]' value='[Sheet13].[Age_category]' />
+          <map key='[Age_category]' value='[Sheet1].[Age_category]' />
+          <map key='[Variation (Sheet12)]' value='[Sheet12].[Variation]' />
+          <map key='[Variation]' value='[Sheet11].[Variation]' />
+          <map key='[Years_category (Sheet13)]' value='[Sheet13].[Years_category]' />
+          <map key='[Years_category]' value='[Sheet1].[Years_category]' />
+          <map key='[bal (Sheet12)]' value='[Sheet12].[bal]' />
+          <map key='[bal (Sheet13)]' value='[Sheet13].[bal]' />
+          <map key='[bal]' value='[Sheet1].[bal]' />
+          <map key='[calls_6_mnth (Sheet12)]' value='[Sheet12].[calls_6_mnth]' />
+          <map key='[calls_6_mnth (Sheet13)]' value='[Sheet13].[calls_6_mnth]' />
+          <map key='[calls_6_mnth]' value='[Sheet1].[calls_6_mnth]' />
+          <map key='[client_id (Sheet11)]' value='[Sheet11].[client_id]' />
+          <map key='[client_id (Sheet12)]' value='[Sheet12].[client_id]' />
+          <map key='[client_id (Sheet13)]' value='[Sheet13].[client_id]' />
+          <map key='[client_id]' value='[Sheet1].[client_id]' />
+          <map key='[clnt_age (Sheet12)]' value='[Sheet12].[clnt_age]' />
+          <map key='[clnt_age (Sheet13)]' value='[Sheet13].[clnt_age]' />
+          <map key='[clnt_age]' value='[Sheet1].[clnt_age]' />
+          <map key='[clnt_tenure_mnth (Sheet12)]' value='[Sheet12].[clnt_tenure_mnth]' />
+          <map key='[clnt_tenure_mnth (Sheet13)]' value='[Sheet13].[clnt_tenure_mnth]' />
+          <map key='[clnt_tenure_mnth]' value='[Sheet1].[clnt_tenure_mnth]' />
+          <map key='[clnt_tenure_yr (Sheet12)]' value='[Sheet12].[clnt_tenure_yr]' />
+          <map key='[clnt_tenure_yr (Sheet13)]' value='[Sheet13].[clnt_tenure_yr]' />
+          <map key='[clnt_tenure_yr]' value='[Sheet1].[clnt_tenure_yr]' />
+          <map key='[date_time]' value='[Sheet11].[date_time]' />
+          <map key='[gendr (Sheet12)]' value='[Sheet12].[gendr]' />
+          <map key='[gendr (Sheet13)]' value='[Sheet13].[gendr]' />
+          <map key='[gendr]' value='[Sheet1].[gendr]' />
+          <map key='[logons_6_mnth (Sheet12)]' value='[Sheet12].[logons_6_mnth]' />
+          <map key='[logons_6_mnth (Sheet13)]' value='[Sheet13].[logons_6_mnth]' />
+          <map key='[logons_6_mnth]' value='[Sheet1].[logons_6_mnth]' />
+          <map key='[num_accts (Sheet12)]' value='[Sheet12].[num_accts]' />
+          <map key='[num_accts (Sheet13)]' value='[Sheet13].[num_accts]' />
+          <map key='[num_accts]' value='[Sheet1].[num_accts]' />
+          <map key='[process_step]' value='[Sheet11].[process_step]' />
+          <map key='[visit_id]' value='[Sheet11].[visit_id]' />
+          <map key='[visitor_id]' value='[Sheet11].[visitor_id]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K9169:no:A1:K9169:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F10001:no:A1:F10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J10001:no:A1:J10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K9169:no:A1:K9169:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>clnt_tenure_yr</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_yr]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>clnt_tenure_yr</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>clnt_tenure_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_mnth]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>clnt_tenure_mnth</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gendr]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>num_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_accts]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>num_accts</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>bal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bal]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>bal</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>calls_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_6_mnth]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>calls_6_mnth</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>logons_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[logons_6_mnth]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>logons_6_mnth</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Age_category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Age_category]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Age_category</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Years_category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Years_category]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Years_category</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id (Sheet11)]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>visitor_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[visitor_id]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>visitor_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>date_time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date_time]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>date_time</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+            <remote-name>Variation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Variation]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>Variation</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+          </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_yr</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_yr (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>clnt_tenure_yr</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_mnth (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>clnt_tenure_mnth</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gendr (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_accts (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>num_accts</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bal (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>bal</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_6_mnth (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>calls_6_mnth</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logons_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[logons_6_mnth (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>logons_6_mnth</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Variation</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Variation (Sheet12)]</local-name>
+            <parent-name>[Sheet12]</parent-name>
+            <remote-alias>Variation</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_yr</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_yr (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>clnt_tenure_yr</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[clnt_tenure_mnth (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>clnt_tenure_mnth</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gendr (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_accts (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>num_accts</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bal</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bal (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>bal</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calls_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calls_6_mnth (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>calls_6_mnth</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logons_6_mnth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[logons_6_mnth (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>logons_6_mnth</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age_category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Age_category (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>Age_category</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Years_category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Years_category (Sheet13)]</local-name>
+            <parent-name>[Sheet13]</parent-name>
+            <remote-alias>Years_category</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LES_RES_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age category (Sheet13)' datatype='string' name='[Age_category (Sheet13)]' role='dimension' type='nominal' />
+      <column caption='Age category' datatype='string' name='[Age_category]' role='dimension' type='nominal' />
+      <column caption='Years category (Sheet13)' datatype='string' name='[Years_category (Sheet13)]' role='dimension' type='nominal' />
+      <column caption='Years category' datatype='string' name='[Years_category]' role='dimension' type='nominal' />
+      <column caption='Times' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]' role='measure' type='quantitative' />
+      <column caption='High Value Client' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]' role='measure' type='quantitative' />
+      <column caption='Events' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]' role='measure' type='quantitative' />
+      <column caption='Demo AB' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]' role='measure' type='quantitative' />
+      <column caption='Bal' datatype='real' name='[bal]' role='measure' type='quantitative' />
+      <column caption='calls 6 mnth (Sheet12)' datatype='integer' name='[calls_6_mnth (Sheet12)]' role='measure' type='quantitative' />
+      <column caption='calls 6 mnth (Sheet13)' datatype='integer' name='[calls_6_mnth (Sheet13)]' role='measure' type='quantitative' />
+      <column caption='Calls 6 Mnth' datatype='integer' name='[calls_6_mnth]' role='measure' type='quantitative' />
+      <column caption='client id (Sheet11)' datatype='integer' name='[client_id (Sheet11)]' role='dimension' type='ordinal' />
+      <column caption='client id (Sheet12)' datatype='integer' name='[client_id (Sheet12)]' role='dimension' type='ordinal' />
+      <column caption='client id (Sheet13)' datatype='integer' name='[client_id (Sheet13)]' role='dimension' type='ordinal' />
+      <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+      <column caption='clnt age (Sheet12)' datatype='real' name='[clnt_age (Sheet12)]' role='measure' type='quantitative' />
+      <column caption='clnt age (Sheet13)' datatype='real' name='[clnt_age (Sheet13)]' role='measure' type='quantitative' />
+      <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+      <column caption='clnt tenure mnth (Sheet12)' datatype='integer' name='[clnt_tenure_mnth (Sheet12)]' role='measure' type='quantitative' />
+      <column caption='clnt tenure mnth (Sheet13)' datatype='integer' name='[clnt_tenure_mnth (Sheet13)]' role='measure' type='quantitative' />
+      <column caption='Clnt Tenure Mnth' datatype='integer' name='[clnt_tenure_mnth]' role='measure' type='quantitative' />
+      <column caption='clnt tenure yr (Sheet12)' datatype='integer' name='[clnt_tenure_yr (Sheet12)]' role='dimension' type='quantitative' />
+      <column caption='clnt tenure yr (Sheet13)' datatype='integer' name='[clnt_tenure_yr (Sheet13)]' role='dimension' type='quantitative' />
+      <column caption='Clnt Tenure Yr' datatype='integer' name='[clnt_tenure_yr]' role='dimension' type='quantitative' />
+      <column caption='Date Time' datatype='datetime' name='[date_time]' role='dimension' type='ordinal' />
+      <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+      <column caption='logons 6 mnth (Sheet12)' datatype='integer' name='[logons_6_mnth (Sheet12)]' role='measure' type='quantitative' />
+      <column caption='logons 6 mnth (Sheet13)' datatype='integer' name='[logons_6_mnth (Sheet13)]' role='measure' type='quantitative' />
+      <column caption='Logons 6 Mnth' datatype='integer' name='[logons_6_mnth]' role='measure' type='quantitative' />
+      <column caption='num accts (Sheet12)' datatype='integer' name='[num_accts (Sheet12)]' role='measure' type='quantitative' />
+      <column caption='num accts (Sheet13)' datatype='integer' name='[num_accts (Sheet13)]' role='measure' type='quantitative' />
+      <column caption='Num Accts' datatype='integer' name='[num_accts]' role='measure' type='quantitative' />
+      <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+      <column caption='Visit Id' datatype='string' name='[visit_id]' role='dimension' type='nominal' />
+      <column caption='Visitor Id' datatype='string' name='[visitor_id]' role='dimension' type='nominal' />
+      <column-instance column='[Years_category (Sheet13)]' derivation='None' name='[none:Years_category (Sheet13):nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='Data/tableau-temp/#TableauTemp_11bnlui020b7wa138ctnf07s0fuz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/17/2026 10:52:45 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <_.fcp.ObjectModelSharedDimensions.true...relation name='Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8' table='[Extract].[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]' type='table' />
+            <_.fcp.ObjectModelSharedDimensions.true...relation name='Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4' table='[Extract].[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]' type='table' />
+            <relation name='Sheet1_F9282F4C86554C4891173CDE24B8CC7B' table='[Extract].[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]' type='table' />
+            <relation name='Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5' table='[Extract].[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Age_category (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[Age_category]' />
+            <map key='[Age_category]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[Age_category]' />
+            <map key='[Variation (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[Variation]' />
+            <map key='[Variation]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[Variation]' />
+            <map key='[Years_category (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[Years_category]' />
+            <map key='[Years_category]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[Years_category]' />
+            <map key='[bal (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[bal]' />
+            <map key='[bal (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[bal]' />
+            <map key='[bal]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[bal]' />
+            <map key='[calls_6_mnth (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[calls_6_mnth]' />
+            <map key='[calls_6_mnth (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[calls_6_mnth]' />
+            <map key='[calls_6_mnth]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[calls_6_mnth]' />
+            <map key='[client_id (Sheet11)]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[client_id]' />
+            <map key='[client_id (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[client_id]' />
+            <map key='[client_id (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[client_id]' />
+            <map key='[client_id]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[client_id]' />
+            <map key='[clnt_age (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[clnt_age]' />
+            <map key='[clnt_age (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[clnt_age]' />
+            <map key='[clnt_age]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[clnt_age]' />
+            <map key='[clnt_tenure_mnth (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[clnt_tenure_mnth]' />
+            <map key='[clnt_tenure_mnth (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[clnt_tenure_mnth]' />
+            <map key='[clnt_tenure_mnth]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[clnt_tenure_mnth]' />
+            <map key='[clnt_tenure_yr (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[clnt_tenure_yr]' />
+            <map key='[clnt_tenure_yr (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[clnt_tenure_yr]' />
+            <map key='[clnt_tenure_yr]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[clnt_tenure_yr]' />
+            <map key='[date_time]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[date_time]' />
+            <map key='[gendr (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[gendr]' />
+            <map key='[gendr (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[gendr]' />
+            <map key='[gendr]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[gendr]' />
+            <map key='[logons_6_mnth (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[logons_6_mnth]' />
+            <map key='[logons_6_mnth (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[logons_6_mnth]' />
+            <map key='[logons_6_mnth]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[logons_6_mnth]' />
+            <map key='[num_accts (Sheet12)]' value='[Sheet1_F9282F4C86554C4891173CDE24B8CC7B].[num_accts]' />
+            <map key='[num_accts (Sheet13)]' value='[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5].[num_accts]' />
+            <map key='[num_accts]' value='[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8].[num_accts]' />
+            <map key='[process_step]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[process_step]' />
+            <map key='[visit_id]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[visit_id]' />
+            <map key='[visitor_id]' value='[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4].[visitor_id]' />
+          </cols>
+          <metadata-records>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9168</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>clnt_tenure_yr</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_yr]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>clnt_tenure_yr</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>clnt_tenure_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_mnth]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>clnt_tenure_mnth</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>clnt_age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_age]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>clnt_age</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>gendr</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gendr]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>gendr</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>num_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_accts]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>num_accts</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>bal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bal]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>bal</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9168</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>calls_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_6_mnth]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>calls_6_mnth</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>logons_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[logons_6_mnth]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>logons_6_mnth</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Age_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Age_category]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>Age_category</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Years_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Years_category]</local-name>
+              <parent-name>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</parent-name>
+              <remote-alias>Years_category</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id (Sheet11)]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Sheet11</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>105686</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>visitor_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visitor_id]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>visitor_id</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Sheet11</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>111288</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>visit_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visit_id]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>visit_id</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Sheet11</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>130564</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>process_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[process_step]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>process_step</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Sheet11</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>date_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date_time]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>date_time</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Sheet11</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>317235</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+              <remote-name>Variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Variation]</local-name>
+              <parent-name>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</parent-name>
+              <remote-alias>Variation</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Sheet11</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]</object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_yr</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_yr (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>clnt_tenure_yr</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_mnth (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>clnt_tenure_mnth</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>669</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_age (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>clnt_age</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Sheet12</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>193</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gendr</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gendr (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>gendr</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Sheet12</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_accts (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>num_accts</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bal (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>bal</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Sheet12</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_6_mnth (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>calls_6_mnth</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>logons_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[logons_6_mnth (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>logons_6_mnth</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Sheet12</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Variation (Sheet12)]</local-name>
+              <parent-name>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</parent-name>
+              <remote-alias>Variation</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Sheet12</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9168</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_yr</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_yr (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>clnt_tenure_yr</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[clnt_tenure_mnth (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>clnt_tenure_mnth</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_age (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>clnt_age</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Sheet13</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>147</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gendr</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gendr (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>gendr</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Sheet13</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_accts (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>num_accts</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bal</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bal (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>bal</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Sheet13</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9168</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calls_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calls_6_mnth (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>calls_6_mnth</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>logons_6_mnth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[logons_6_mnth (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>logons_6_mnth</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Sheet13</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Age_category (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>Age_category</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Sheet13</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Years_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Years_category (Sheet13)]</local-name>
+              <parent-name>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</parent-name>
+              <remote-alias>Years_category</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Sheet13</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LES_RES_S2' />
+              <object-id>[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Years_category (Sheet13):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;New&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Loyal&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Established&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='Times' id='Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8'>
+            <properties context=''>
+              <relation connection='excel-direct.1lfikcq1pmfzv71294z7s18mvexq' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:K9169:no:A1:K9169:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+                  <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+                  <column datatype='real' name='clnt_age' ordinal='3' />
+                  <column datatype='string' name='gendr' ordinal='4' />
+                  <column datatype='integer' name='num_accts' ordinal='5' />
+                  <column datatype='real' name='bal' ordinal='6' />
+                  <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+                  <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+                  <column datatype='string' name='Age_category' ordinal='9' />
+                  <column datatype='string' name='Years_category' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8' table='[Extract].[Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8]' type='table' />
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+          <object caption='High Value Client' id='Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5'>
+            <properties context=''>
+              <relation connection='excel-direct.1lfikcq1pmfzv71294z7s18mvexq' name='Sheet13' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:K9169:no:A1:K9169:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+                  <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+                  <column datatype='real' name='clnt_age' ordinal='3' />
+                  <column datatype='string' name='gendr' ordinal='4' />
+                  <column datatype='integer' name='num_accts' ordinal='5' />
+                  <column datatype='real' name='bal' ordinal='6' />
+                  <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+                  <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+                  <column datatype='string' name='Age_category' ordinal='9' />
+                  <column datatype='string' name='Years_category' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5' table='[Extract].[Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5]' type='table' />
+            </properties>
+          </object>
+          <_.fcp.ObjectModelSharedDimensions.true...object caption='Events' id='Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4'>
+            <properties context=''>
+              <relation connection='excel-direct.1poaxvw1czkenq160ywl00gbback' name='Sheet11' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:F10001:no:A1:F10001:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='string' name='visitor_id' ordinal='1' />
+                  <column datatype='string' name='visit_id' ordinal='2' />
+                  <column datatype='string' name='process_step' ordinal='3' />
+                  <column datatype='datetime' name='date_time' ordinal='4' />
+                  <column datatype='string' name='Variation' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4' table='[Extract].[Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4]' type='table' />
+            </properties>
+          </_.fcp.ObjectModelSharedDimensions.true...object>
+          <object caption='Demo AB' id='Sheet1_F9282F4C86554C4891173CDE24B8CC7B'>
+            <properties context=''>
+              <relation connection='excel-direct.0nkcipf0dc3cxx11m755j0oxxt8r' name='Sheet12' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:J10001:no:A1:J10001:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='integer' name='clnt_tenure_yr' ordinal='1' />
+                  <column datatype='integer' name='clnt_tenure_mnth' ordinal='2' />
+                  <column datatype='real' name='clnt_age' ordinal='3' />
+                  <column datatype='string' name='gendr' ordinal='4' />
+                  <column datatype='integer' name='num_accts' ordinal='5' />
+                  <column datatype='real' name='bal' ordinal='6' />
+                  <column datatype='integer' name='calls_6_mnth' ordinal='7' />
+                  <column datatype='integer' name='logons_6_mnth' ordinal='8' />
+                  <column datatype='string' name='Variation' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Sheet1_F9282F4C86554C4891173CDE24B8CC7B' table='[Extract].[Sheet1_F9282F4C86554C4891173CDE24B8CC7B]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[client_id (Sheet12)]' />
+              <expression op='[client_id (Sheet13)]' />
+            </expression>
+            <first-end-point object-id='Sheet1_F9282F4C86554C4891173CDE24B8CC7B' />
+            <second-end-point object-id='Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5' />
+          </relationship>
+          <_.fcp.ObjectModelSharedDimensions.true...relationship>
+            <expression op='='>
+              <expression op='[client_id]' />
+              <expression op='[client_id (Sheet11)]' />
+            </expression>
+            <first-end-point object-id='Sheet1_182A8B6D505546FF9B17CDD5A2BF0FB8' />
+            <second-end-point object-id='Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4' />
+          </_.fcp.ObjectModelSharedDimensions.true...relationship>
+          <_.fcp.ObjectModelSharedDimensions.true...relationship>
+            <expression op='='>
+              <expression op='[client_id (Sheet13)]' />
+              <expression op='[client_id (Sheet11)]' />
+            </expression>
+            <first-end-point object-id='Sheet1_298F1C82BFB54B55B87E2585AFE8C2B5' />
+            <second-end-point object-id='Sheet1_9A579C59F4CC4A9AB8BD9B37F87B73E4' />
+          </_.fcp.ObjectModelSharedDimensions.true...relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Dispersión edad'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Dispersión de edad - Cliente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Varias conexiones)' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kyyfap08fnhiw1023mnf0a2u5td'>
+            <column caption='client id (Sheet13)' datatype='integer' name='[client_id (Sheet13)]' role='dimension' type='ordinal' />
+            <column caption='clnt age (Sheet13)' datatype='real' name='[clnt_age (Sheet13)]' role='measure' type='quantitative' />
+            <column caption='clnt tenure yr (Sheet12)' datatype='integer' name='[clnt_tenure_yr (Sheet12)]' role='dimension' type='quantitative' />
+            <column caption='clnt tenure yr (Sheet13)' datatype='integer' name='[clnt_tenure_yr (Sheet13)]' role='dimension' type='quantitative' />
+            <column-instance column='[client_id (Sheet13)]' derivation='None' name='[none:client_id (Sheet13):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[clnt_age (Sheet13)]' derivation='None' name='[none:clnt_age (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_yr (Sheet12)]' derivation='None' name='[none:clnt_tenure_yr (Sheet12):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[clnt_tenure_yr (Sheet13)]' derivation='None' name='[none:clnt_tenure_yr (Sheet13):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:client_id (Sheet13):ok]' />
+              <lod column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:clnt_tenure_yr (Sheet13):qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.097955800592899323' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:clnt_age (Sheet13):qk]</rows>
+        <cols>[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:clnt_tenure_yr (Sheet12):qk]</cols>
+      </table>
+      <simple-id uuid='{3013FEEC-AE1A-4E96-97F0-00F16C06BBE8}' />
+    </worksheet>
+    <worksheet name='Edad del cliente'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Edad del cliente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Varias conexiones)' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kyyfap08fnhiw1023mnf0a2u5td'>
+            <column caption='Age category (Sheet13)' datatype='string' name='[Age_category (Sheet13)]' role='dimension' type='nominal' />
+            <column caption='client id (Sheet13)' datatype='integer' name='[client_id (Sheet13)]' role='dimension' type='ordinal' />
+            <column-instance column='[client_id (Sheet13)]' derivation='Count' name='[cnt:client_id (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age_category (Sheet13)]' derivation='None' name='[none:Age_category (Sheet13):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Age_category (Sheet13)]' derivation='Count' name='[pcto:cnt:Age_category (Sheet13):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Age_category (Sheet13):nk]' />
+              <wedge-size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[pcto:cnt:Age_category (Sheet13):qk]' />
+              <size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[pcto:cnt:Age_category (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Age_category (Sheet13):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.8570718765258789' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{54E84F39-09F7-49E9-AD2A-2411D64BCF47}' />
+    </worksheet>
+    <worksheet name='Género Cliente'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Género cliente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Varias conexiones)' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kyyfap08fnhiw1023mnf0a2u5td'>
+            <column caption='client id (Sheet13)' datatype='integer' name='[client_id (Sheet13)]' role='dimension' type='ordinal' />
+            <column-instance column='[client_id (Sheet13)]' derivation='Count' name='[cnt:client_id (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gendr (Sheet13)]' derivation='Count' name='[cnt:gendr (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[gendr (Sheet13)]' role='dimension' type='nominal' />
+            <column-instance column='[gendr (Sheet13)]' derivation='None' name='[none:gendr (Sheet13):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:gendr (Sheet13):nk]' />
+              <wedge-size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:gendr (Sheet13):qk]' />
+              <size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:gendr (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:gendr (Sheet13):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.8570718765258789' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{74BF385F-9143-488C-94BF-9CF625944561}' />
+    </worksheet>
+    <worksheet name='Hoja 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Varias conexiones)' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kyyfap08fnhiw1023mnf0a2u5td'>
+            <column caption='clnt age (Sheet13)' datatype='real' name='[clnt_age (Sheet13)]' role='measure' type='quantitative' />
+            <column caption='logons 6 mnth (Sheet13)' datatype='integer' name='[logons_6_mnth (Sheet13)]' role='measure' type='quantitative' />
+            <column-instance column='[clnt_age (Sheet13)]' derivation='None' name='[none:clnt_age (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[logons_6_mnth (Sheet13)]' derivation='None' name='[none:logons_6_mnth (Sheet13):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:clnt_age (Sheet13):qk]</rows>
+        <cols>[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:logons_6_mnth (Sheet13):qk]</cols>
+      </table>
+      <simple-id uuid='{25FE5EDA-7F73-49CD-8168-F96EC8A8B5E0}' />
+    </worksheet>
+    <worksheet name='Permanencia del cliente'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Permanencia del cliente</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Varias conexiones)' name='federated.1kyyfap08fnhiw1023mnf0a2u5td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kyyfap08fnhiw1023mnf0a2u5td'>
+            <column caption='Years category (Sheet13)' datatype='string' name='[Years_category (Sheet13)]' role='dimension' type='nominal' />
+            <column caption='client id (Sheet13)' datatype='integer' name='[client_id (Sheet13)]' role='dimension' type='ordinal' />
+            <column-instance column='[Years_category (Sheet13)]' derivation='Count' name='[cnt:Years_category (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[client_id (Sheet13)]' derivation='Count' name='[cnt:client_id (Sheet13):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Years_category (Sheet13)]' derivation='None' name='[none:Years_category (Sheet13):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Years_category (Sheet13)]' derivation='Count' name='[pcto:cnt:Years_category (Sheet13):qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Years_category (Sheet13):nk]' />
+              <wedge-size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:Years_category (Sheet13):qk]' />
+              <size column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[pcto:cnt:Years_category (Sheet13):qk]' />
+              <text column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Years_category (Sheet13):nk]' />
+              <lod column='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{61998B41-F792-4D10-89A3-70B690BD2F7D}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Permanencia del cliente'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Years_category (Sheet13):nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{57CE7FE5-EC2D-4BBD-8EBF-660134C87C61}' />
+    </window>
+    <window class='worksheet' name='Edad del cliente'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:Age_category (Sheet13):nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DDF39775-BD98-487C-A060-010A2EA7454F}' />
+    </window>
+    <window class='worksheet' name='Género Cliente'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:gendr (Sheet13):nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[cnt:client_id (Sheet13):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7D773AD2-35A7-482A-84DF-F1002D97F2A9}' />
+    </window>
+    <window class='worksheet' name='Dispersión edad'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='175'>
+            <card pane-specification-id='2' param='[federated.1kyyfap08fnhiw1023mnf0a2u5td].[none:client_id (Sheet13):ok]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F07D8C7C-85B1-4EC4-8DB7-1C740189A635}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Hoja 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8E24CDE2-9BFA-4412-ACC7-45FB5372D398}' />
+    </window>
+  </windows>
+</workbook>
