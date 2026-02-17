@@ -4,3 +4,4 @@ __pycache__/
 .venv/
 data/
 calcular_tiempo_para_test.md
+*.twbr
