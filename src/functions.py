@@ -232,3 +232,21 @@ def preparar_grupos_experimento(df_exp, df_demo, columna_valor):
     control_vals = df_merged[df_merged["Variation"] == "Control"][columna_valor]
     
     return test_vals, control_vals, df_merged
+
+def save_data_clean_excel(df, nombre):
+    """
+    Guarda un dataframe desde notebooks/ y lo guarda en data/cleaned/, 
+    si no existe, crea el directorio.
+
+    :param df: dataframe que se quiere guardar como .xlsx
+    :param nombre: nombre que tomará el archivo
+    """
+    out_dir = DATA_CLEAN_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    ts = datetime.now().strftime("%Y%m%d_%H%M")
+    out_path = out_dir / f"{ts}_{nombre}.xlsx"
+    df = df.drop_duplicates()
+    df.to_excel(out_path, index=False, engine="openpyxl")
+    print(f"Guardado: {out_path}")
+    return "ok"
