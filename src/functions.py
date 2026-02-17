@@ -164,7 +164,9 @@ def calcular_tiempo_para_test(df, df2):
     - Si un client_id confirma en varias sesiones, se toma la PRIMERA sesion
       que confirma (menor `t_confirm`).
 
-    Devuelve dos Series numéricas (segundos) listas para `ttest_ind`.
+    Devuelve dos Series numéricas (segundos) listas para `ttest_ind` y,
+    adicionalmente, un dataframe `first_confirm` (una fila por client_id)
+    útil para graficar y auditar.
 
     :param df: dataframe de eventos (debe incluir client_id, visit_id, process_step, date_time)
     :param df2: dataframe de asignacion al experimento (debe incluir client_id, Variation)
@@ -216,7 +218,7 @@ def calcular_tiempo_para_test(df, df2):
         first_confirm["Variation"] == "Test", "time_to_confirm_seconds"
     ]
 
-    return control_times, test_times
+    return control_times, test_times, first_confirm
 
 def preparar_grupos_experimento(df_exp, df_demo, columna_valor):
     """
