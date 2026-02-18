@@ -103,7 +103,7 @@ def tiempo_dedicado(df):
     print(f"El tiempo dedicado de start a paso 1 es: {media_paso1}")
     print(f"El tiempo dedicado del paso 1 al paso 2 es: {media_paso2}")
     print(f"El tiempo dedicado del paso 2 al paso 3 es: {media_paso3}")
-    print(f"El tiempo dedicado del paso 3 a confirm es: {media_paso1}")
+    print(f"El tiempo dedicado del paso 3 a confirm es: {media_paso4}")
     return media_paso1, media_paso2, media_paso3, media_paso4
 
 def tasa_error(df):
@@ -296,21 +296,38 @@ def cliente_principal(df):
     """
     mode_calls = df["calls_6_mnth"].mode()[0]
     mode_logons = df["logons_6_mnth"].mode()[0]
-    df_client_mode = df[(df["logons_6_mnth"] >= mode_logons) & (df["calls_6_mnth"]>=mode_calls)]
-    min_clnt_age = df_client_mode["clnt_age"].min()
-    max_clnt_age = df_client_mode["clnt_age"].max()
-    bins = [min_clnt_age, 30.0, 50.0, max_clnt_age]
-    labels = ['Young', 'Medium', 'Old',]
-    df_client_mode['Age_category'] = pd.cut(df_client_mode['clnt_age'], bins=bins, labels=labels, include_lowest=True)
-    min_clnt_tenure_yr = df_client_mode["clnt_tenure_yr"].min()
-    max_clnt_tenure_yr = df_client_mode["clnt_tenure_yr"].max()
-    bins = [min_clnt_tenure_yr, 15, 35, max_clnt_tenure_yr]
-    labels = ['New', 'Established', 'Loyal',]
-    df_client_mode['Years_category'] = pd.cut(df_client_mode['clnt_tenure_yr'], bins=bins, labels=labels, include_lowest=True)
-    q3 = df_client_mode["bal"].quantile(0.25)
-    high_value_client = df_client_mode[df_client_mode["bal"] > q3]
-    high_value_client["Age_category"] = high_value_client["Age_category"].astype(str)
-    high_value_client["Years_category"] = high_value_client["Years_category"].astype(str)
+    # Nota: usamos >= moda (no ==) para mantener la logica usada en Tableau.
+    df_client_mode = df[
+        (df["logons_6_mnth"] >= mode_logons) & (df["calls_6_mnth"] >= mode_calls)
+    ].copy()
+
+    # Bins fijos (no dependen del min/max del subset) para evitar cortes raros
+    age_bins = [0.0, 30.0, 50.0, np.inf]
+    age_labels = ["Young", "Medium", "Old"]
+    df_client_mode.loc[:, "Age_category"] = pd.cut(
+        df_client_mode["clnt_age"],
+        bins=age_bins,
+        labels=age_labels,
+        include_lowest=True,
+    )
+
+    tenure_bins = [0.0, 15.0, 35.0, np.inf]
+    tenure_labels = ["New", "Established", "Loyal"]
+    df_client_mode.loc[:, "Years_category"] = pd.cut(
+        df_client_mode["clnt_tenure_yr"],
+        bins=tenure_bins,
+        labels=tenure_labels,
+        include_lowest=True,
+    )
+
+    q1 = df_client_mode["bal"].quantile(0.25)
+    high_value_client = df_client_mode[df_client_mode["bal"] > q1].copy()
+    high_value_client.loc[:, "Age_category"] = high_value_client["Age_category"].astype(
+        str
+    )
+    high_value_client.loc[:, "Years_category"] = high_value_client[
+        "Years_category"
+    ].astype(str)
     return high_value_client
 
 def visual_pie_chart_age(df, show=True):
@@ -346,6 +363,50 @@ def visual_pie_chart_tenure_yr(df, show=True):
         plt.show()
     
     return fig, ax
+
+def visual_tabla_cruzada_age_years(df, normalize="row", show=True):
+    """
+    Tabla cruzada (Years_category x Age_category) para analizar combinaciones tipo:
+    - Dentro de `New`, cuantos son `Old`.
+
+    Params:
+    - normalize: "row" (por defecto) para % por Years_category, o None para conteos.
+    - show: muestra el plot si True.
+
+    Returns:
+    - counts: DataFrame de conteos.
+    - row_pct: DataFrame de % por fila (0-100).
+    - fig, ax: figura y ejes del heatmap.
+    """
+    required_cols = {"Age_category", "Years_category"}
+    missing = required_cols - set(df.columns)
+    if missing:
+        raise KeyError(f"Faltan columnas requeridas: {sorted(missing)}")
+
+    counts = pd.crosstab(df["Years_category"], df["Age_category"])
+    row_pct = counts.div(counts.sum(axis=1), axis=0).mul(100).round(1)
+
+    if normalize == "row":
+        heatmap_data = row_pct
+        fmt = ".1f"
+        title = "Years_category x Age_category (% por Years_category)"
+    elif normalize is None:
+        heatmap_data = counts
+        fmt = "d"
+        title = "Years_category x Age_category (conteos)"
+    else:
+        raise ValueError('normalize debe ser "row" o None')
+
+    fig, ax = plt.subplots(figsize=(7, 4))
+    sns.heatmap(heatmap_data, annot=True, fmt=fmt, cmap="Oranges", ax=ax)
+    ax.set_title(title)
+    ax.set_xlabel("Age_category")
+    ax.set_ylabel("Years_category")
+
+    if show:
+        plt.show()
+
+    return counts, row_pct, fig, ax
 
 def visualizacion_test_1(finish_control, finish_test, show=True):
     """
