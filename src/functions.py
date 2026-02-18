@@ -5,6 +5,8 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 from IPython.display import display
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Encuentra la raíz del proyecto usando __file__
 
@@ -250,3 +252,183 @@ def save_data_clean_excel(df, nombre):
     df.to_excel(out_path, index=False, engine="openpyxl")
     print(f"Guardado: {out_path}")
     return "ok"
+
+def informe(x):
+    print("Información del DataFrame:")
+    print(x.info())
+    print("Descripción estadística:")
+    print(x.describe())
+    print("Valores nulos:")
+    print(x.isnull().sum())
+    print("Tipos de datos:")
+    print(x.dtypes)
+    print("Primeras 5 filas:")
+    print(x.head())
+    print("Últimas 5 filas:")
+    print(x.tail())
+    print("Forma del DataFrame:")
+    print(x.shape)
+    print("columnas")
+    print(x.columns)
+
+def datos(x):
+    print("datos nulos")
+    print(x.isnull().sum())
+    print("datos totales")
+    print(x.count())   
+    print("porcentaje de nulos")
+    print(x.isnull().sum() / x.shape[0]*100)
+    print("datos duplicados")
+    print(x.duplicated().sum())
+
+
+def eliminar_na(df):
+    """
+    Toma un dataframe y elimina NaN
+    """
+    cols = ["clnt_tenure_yr","clnt_tenure_mnth","gendr","num_accts","bal","calls_6_mnth","logons_6_mnth"]
+    df = df.dropna(subset=cols)
+    return df
+
+def cliente_principal(df):
+    """
+    Discretiza clnt_age, define el cliente principal para análisis demográfico.
+    """
+    mode_calls = df["calls_6_mnth"].mode()[0]
+    mode_logons = df["logons_6_mnth"].mode()[0]
+    df_client_mode = df[(df["logons_6_mnth"] >= mode_logons) & (df["calls_6_mnth"]>=mode_calls)]
+    min_clnt_age = df_client_mode["clnt_age"].min()
+    max_clnt_age = df_client_mode["clnt_age"].max()
+    bins = [min_clnt_age, 30.0, 50.0, max_clnt_age]
+    labels = ['Young', 'Medium', 'Old',]
+    df_client_mode['Age_category'] = pd.cut(df_client_mode['clnt_age'], bins=bins, labels=labels, include_lowest=True)
+    min_clnt_tenure_yr = df_client_mode["clnt_tenure_yr"].min()
+    max_clnt_tenure_yr = df_client_mode["clnt_tenure_yr"].max()
+    bins = [min_clnt_tenure_yr, 15, 35, max_clnt_tenure_yr]
+    labels = ['New', 'Established', 'Loyal',]
+    df_client_mode['Years_category'] = pd.cut(df_client_mode['clnt_tenure_yr'], bins=bins, labels=labels, include_lowest=True)
+    q3 = df_client_mode["bal"].quantile(0.25)
+    high_value_client = df_client_mode[df_client_mode["bal"] > q3]
+    high_value_client["Age_category"] = high_value_client["Age_category"].astype(str)
+    high_value_client["Years_category"] = high_value_client["Years_category"].astype(str)
+    return high_value_client
+
+def visual_pie_chart_age(df, show=True):
+    """
+    Toma df de high_value_client y devuelve fig, ax para visualización.
+    Por defecto visualiza; show=False si se quiere fig, ax solo.
+    """
+    freq = df["Age_category"].value_counts()
+    colors = sns.color_palette("Set3", n_colors=len(freq))
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+    freq.plot.pie(autopct="%1.1f%%", startangle=45, colors=colors, ax=ax)
+    ax.set_ylabel("")
+
+    if show:
+        plt.show()
+
+    return fig, ax
+
+def visual_pie_chart_tenure_yr(df, show=True):
+    """
+    Toma df de high_value_client y devuelve fig, ax para visualización.
+    Por defecto visualiza; show=False si se quiere fig, ax solo.
+    """
+    freq= df["Years_category"].value_counts()
+    colors = sns.color_palette("Set3", n_colors=len(freq))
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+    freq.plot.pie(autopct="%1.1f%%", startangle=45, colors=colors, ax=ax)
+    ax.set_ylabel("")
+
+    if show:
+        plt.show()
+    
+    return fig, ax
+
+def visualizacion_test_1(finish_control, finish_test, show=True):
+    """
+    Visualiza el numero de usuarios que finalizan (confirm) por grupo.
+
+    `finish_control` y `finish_test` deben ser Series/arrays de 0/1 (por client_id).
+    """
+    labels = ["Control", "Test"]
+    valores = [int(finish_control.sum()), int(finish_test.sum())]
+
+    fig, ax = plt.subplots(figsize=(5, 4))
+    bars = ax.bar(labels, valores, color=["gray", "blue"])
+    ax.set_ylabel("Num usuarios que finalizan")
+    ax.set_title("Usuarios que finalizan por grupo")
+    ax.bar_label(bars, padding=3)
+
+    if show:
+        plt.show()
+
+    return fig, ax
+
+
+def filtro_y_tasa(df1, df2):
+    """
+    Filtra dos dfs y devuelve tasa de finalización llamando a la función tasa_finalizacion.
+    También devuelve los df para experimento: df_control y df_test
+    :param df1: dataframe con variation
+    :param df2: dataframe con client_id
+    """
+    test = df1[df1["Variation"]=="Test"]
+    control = df1[df1["Variation"]=="Control"]
+    # Filtramos grupo de control
+    
+    df_control = df2[df2["client_id"].isin(control["client_id"])]
+    df_test = df2[df2["client_id"].isin(test["client_id"])]
+
+    # Tasa finalización
+
+    tasa_finalizacion_control = tasa_finalizacion(df_control)
+    tasa_finalizacion_test = tasa_finalizacion(df_test)
+
+    return tasa_finalizacion_control, tasa_finalizacion_test, df_control, df_test
+
+def visualizacion_test_2(df, show=True):
+    """
+    Histograma de `time_to_confirm_seconds` por `Variation`.
+    Devuelve (fig, ax).
+    """
+    fig, ax = plt.subplots(figsize=(7, 4))
+
+    sns.histplot(
+        data=df,
+        x="time_to_confirm_seconds",
+        hue="Variation",
+        kde=True,
+        stat="density",
+        common_norm=False,
+        bins=30,
+        ax=ax,
+    )
+
+    ax.set_title("Time to confirm (seconds)")
+
+    if show:
+        plt.show()
+
+    return fig, ax
+
+def visualizacion_test_3(df, show=True):
+    
+    fig, ax = plt.subplots(figsize=(7, 4))
+    sns.histplot(data=df, x="clnt_age", hue="Variation", kde=True, element="step", ax=ax)
+    ax.set_title(f"Distribución de Edad")
+
+    if show:
+        plt.show()
+
+    return fig, ax
+
+def visualizacion_test_4(df, show=True):
+    fig, ax = plt.subplots(figsize=(7, 4))
+    sns.boxplot(data=df, x="Variation", y="clnt_tenure_yr", palette="Set2")
+    ax.set_title("Comparación de Permanencia en Años")
+    if show:
+        plt.show()
+    return fig, ax
