@@ -2,6 +2,7 @@ _dashboard.md
 __pycache__/
 .DS_Store
 .venv/
+.venv_project2/
 data/
 calcular_tiempo_para_test.md
 *.twbr
